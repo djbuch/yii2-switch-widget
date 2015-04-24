@@ -44,11 +44,11 @@ class SwitchBox extends InputWidget
     public function run()
     {
 
-        if ($this->hasModel()) {
+        /*if ($this->hasModel()) {
             $input = Html::activeCheckbox($this->model, $this->attribute, $this->options);
-        } else {
+        } else {*/
             $input = Html::checkbox($this->name, $this->checked, $this->options);
-        }
+        //}
         echo $this->inlineLabel ? $input : Html::tag('div', $input);
         $this->selector = "#{$this->options['id']}";
 
